@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {  // Change this to your API route prefix
-        target: 'http://localhost:8888',  // Backend server URL
+        target: 'https://bistrobliss-bacckend.onrender.com',  // Backend server URL
         changeOrigin: true,
         secure: false, // Set to `true` if backend is HTTPS and has a valid SSL certificate
         rewrite: (path) => path.replace(/^\/api/, '') // Optional: Rewrite API path
