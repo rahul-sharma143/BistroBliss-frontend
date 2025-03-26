@@ -15,13 +15,18 @@ export default {
       },
       animation: {
         bounce: "bounce 1s infinite",
-        scaleUp: "scaleUp 0.6s ease-out",
+        fadeIn: 'fadeIn 1s ease-out forwards',
+        scaleUp: 'scaleUp 0.6s ease-out', 
       },
       keyframes: {
         bounce: {
           "0%": { transform: "translateY(5)" },
           "50%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(0)" },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '2' },
         },
         scaleUp: {
           "0%": { transform: "scale(0)" }, // Start from a smaller size

@@ -18,7 +18,7 @@ const Info = () => {
                 warmth and dedication, strives to make every visit an
                 unforgettable event.
               </p>
-              <div className="grid grid-cols-2 text-center px-10 mt-10 gap-5">
+              <div className="grid grid-cols-2 text-center px-10 mt-10 gap-5 animate-scaleUp">
                 <div className="bg-white border border-bg rounded-lg py-8">
                   <h2 className="h2 mb-3">3</h2>
                   <p className="font-DM sans font-medium">Location</p>
