@@ -1,8 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import {toast} from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'; 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookingForm = () => {
   const {
@@ -12,9 +12,11 @@ const BookingForm = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
     try {
-      const response = await axios.post("api/booking", data);
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/booking`,
+        data
+      );
       console.log(response.data);
       toast.success("You have successfully booked a table!");
     } catch (error) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const ContactForm = () => {
@@ -12,11 +12,14 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data); 
+    console.log(data);
     try {
-      const response = await axios.post("api/contactus", data);
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/contactus`,
+        data
+      );
       console.log(response.data);
-      toast.success("Message has been sent")
+      toast.success("Message has been sent");
     } catch (error) {
       console.error("There was an error!", error);
     }
